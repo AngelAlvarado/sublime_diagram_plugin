@@ -31,10 +31,10 @@ class PlantUMLDiagram(BaseDiagram):
         status_message("Generating Diagram: "+fileName)
 
         if isPreview:
-            outputfile = gettempdir()+'\\TempDiagrams\\'+fileName
+            outputfile =join(gettempdir(), 'TempDiagrams', fileName)
         else:
-            outputfile = startDir+'\\'+fileName
-        print(outputfile)
+            outputfile =join(startDir, fileName)
+        # print(outputfile)
 
         newPath = split(outputfile)[0]
         if not exists(newPath):
